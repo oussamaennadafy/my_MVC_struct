@@ -51,12 +51,14 @@ class Connection
 		$query->execute();
 		return $query->fetchAll(PDO::FETCH_ASSOC);
 	}
+
 	public function selectOne($table,$id)
 	{
 		$query=$this->conn->prepare("SELECT * FROM `$table` where id=$id");
 		$query->execute();
 		return $query->fetchAll(PDO::FETCH_ASSOC)[0];
 	}
+	
 	public function update($table,$tableCln,$tableVal,$id)
 	{
 		$names="";

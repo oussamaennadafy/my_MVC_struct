@@ -10,6 +10,7 @@ class Produit
 	private $table="produits";
 	private $name;
 	private $quantity;
+	
 	function __construct($name,$quantity)
 	{
 		$this->name=$name;
